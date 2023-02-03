@@ -1,0 +1,28 @@
+.Navbar{
+   width: 100%;
+   background-color: antiquewhite;
+   
+   .container{
+      width: 90%;
+
+      nav{
+         padding-block: 20px;
+         padding-inline: 50px;
+         display: flex;
+         justify-content:space-between;
+         align-items: center;
+
+         .nav-list{
+            ul{
+               list-style: none;
+               display: flex;
+              gap: 50px;
+              justify-content: center;
+              align-items: center;
+
+
+            }
+         }
+      }
+   }
+}

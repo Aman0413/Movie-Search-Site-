@@ -1,0 +1,53 @@
+.Home{
+   width: 100%;
+   height: 100vh;
+   background-color: #eee;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   .container{
+      // background-color: red;
+      width: 90%;
+      flex-direction: column;
+     
+      .search{
+      // background-color: yellow;
+         width: 50%;
+         display: flex;
+         justify-content:center;
+         padding-block: 20px;
+   
+         .search-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            input{
+               padding-inline: 10px;
+               padding-block: 15px;
+               width: 260px;
+            }
+
+            button{
+              
+               padding-block: 15px;
+               padding-inline: 30px;
+            }
+         }
+      }
+
+      .movies-show{
+         width: 100%;
+         height: 100vh;
+         background-color: red;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+         padding-block: 40px;
+         padding-inline: 40px;
+         justify-content: center;
+         
+      }
+   }
+}

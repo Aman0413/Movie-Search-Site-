@@ -11,7 +11,7 @@ function Home() {
   async function fetchData(search) {
     try {
       const data = await axios.get(
-        `https://www.omdbapi.com/?s=${search}&apikey=3efbc619`
+        `https://www.omdbapi.com/?s=${search}&apikey=${apiKey}`
       );
 
       setmyData(data.data.Search);
@@ -48,8 +48,15 @@ function Home() {
 
         <div className="movies-show">
           {myData.map((item) => {
-            const { Title, Poster, imdbID } = item;
-            return <MovieBox Title={Title} key={imdbID} Poster={Poster} />;
+            const { Title, Poster, imdbID, Year } = item;
+            return (
+              <MovieBox
+                Title={Title}
+                Poster={Poster}
+                Key={imdbID}
+                Year={Year}
+              />
+            );
           })}
         </div>
       </div>

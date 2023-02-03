@@ -1,17 +1,17 @@
-import React from "react";
 import "./MovieBox.scss";
-import dummyImg from "../../assets/wp5207687.jpg";
-
-function MovieBox({ Title, Poster }) {
+function MovieBox({ Title, Poster, Key, Year }) {
   return (
-    <div className="MovieBox">
-      <div className="image">
-        <img src={Poster} alt="" />
+    <>
+      <div className="MovieBox">
+        <div className="image">
+          <img src={Poster} alt="" />
+        </div>
+        <div className="title">
+          <p>{Year}</p>
+          <h3>{Title}</h3>
+        </div>
       </div>
-      <div className="title">
-        <h3>{Title}</h3>
-      </div>
-    </div>
+    </>
   );
 }
 

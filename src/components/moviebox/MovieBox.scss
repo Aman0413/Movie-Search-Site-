@@ -1,19 +1,21 @@
 .MovieBox{
    width: 200px;
-   height: 250px;
-   background-color: aliceblue;
+   height: 170px;
+   background-color: #dfdbd8;
    text-align: center;
    transition: all .3s ease-in-out;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  
    
 
-.title{
- background-color: yellow;
- height: 80px;
-padding-inline: 5px;
-padding-block: 5px;
+   .title{
+      background-color: #e2e0d4;
+      height: 100px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding-inline: 5px;
+      padding-block: 5px;
 
-}
+   }
    .image{
       width:200px;
       height: 200px;
@@ -29,5 +31,14 @@ padding-block: 5px;
    }
    &:active{
       scale: (1);
+   }
+
+   @media screen and (max-width:768px) {
+      width: 100px;
+      height: 100px;
+         .title{
+            background-color: red;
+         }
+      
    }
 }

@@ -8,7 +8,7 @@ function MovieBox({ Title, Poster }) {
       <div className="image">
         <img src={Poster} alt="" />
       </div>
-      <div>
+      <div className="title">
         <h3>{Title}</h3>
       </div>
     </div>

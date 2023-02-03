@@ -3,9 +3,17 @@
    height: 250px;
    background-color: aliceblue;
    text-align: center;
+   transition: all .3s ease-in-out;
+ 
    
 
+.title{
+ background-color: yellow;
+ height: 80px;
+padding-inline: 5px;
+padding-block: 5px;
 
+}
    .image{
       width:200px;
       height: 200px;
@@ -15,5 +23,11 @@
          width: 200px;
          height: 200px;
       }
+   }
+   &:hover{
+      scale:(1.1) ;
+   }
+   &:active{
+      scale: (1);
    }
 }

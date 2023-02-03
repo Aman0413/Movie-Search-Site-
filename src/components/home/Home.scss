@@ -30,9 +30,19 @@
             }
 
             button{
-              
+              background-color: #047BD5;
+              color: white;
+              font-weight: bold;
+              border: none;
                padding-block: 15px;
                padding-inline: 30px;
+
+               &:hover{
+                  background-color: #0381e1;
+               }
+               &:active{
+                   background-color: #047BD5;
+               }
             }
          }
       }

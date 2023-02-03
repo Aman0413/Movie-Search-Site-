@@ -5,12 +5,13 @@ import axios from "axios";
 
 function Home() {
   const [myData, setmyData] = useState([]);
+  const [searchData, setsearchData] = useState("");
   const apiKey = "3efbc619";
 
   async function fetchData(search) {
     try {
       const data = await axios.get(
-        `https://www.omdbapi.com/?s=${search}&apikey=${apiKey}`
+        `https://www.omdbapi.com/?s=${search}&apikey=3efbc619`
       );
 
       setmyData(data.data.Search);
@@ -20,18 +21,28 @@ function Home() {
   }
 
   useEffect(() => {
-    fetchData("avengers");
+    fetchData("avatar");
   }, []);
-
-  console.log(myData);
 
   return (
     <div className="Home ">
       <div className="container center">
         <div className="search">
           <div className="search-box">
-            <input type="text" placeholder="Search Movies" />
-            <button>Search</button>
+            <input
+              type="text"
+              placeholder="Search Movies"
+              onChange={(e) => {
+                setsearchData(e.target.value);
+              }}
+            />
+            <button
+              onClick={() => {
+                fetchData(searchData);
+              }}
+            >
+              Search
+            </button>
           </div>
         </div>
 
